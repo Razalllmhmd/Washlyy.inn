@@ -646,14 +646,3 @@ footer p{
   }
 
 }
-
-@media(max-width:768px){
-
-  .premium-card{
-      left:50%;
-      top:45%;
-      width:90%;
-      max-width:350px;
-  }
-
-}
