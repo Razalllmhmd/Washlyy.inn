@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Washlyy Dashboard</title>
+
+<link rel="stylesheet" href="css/dashboard.css">
+<link rel="icon" type="image/png" href="images/logo.png">
+
+</head>
+
+<body>
+
+<div class="dashboard">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+
+    <h2>🧺 Washlyy.Inn</h2>
+
+    <ul>
+      <li class="active">Dashboard</li>
+      <li onclick="goBook()">➕ Book Pickup</li>
+      <li onclick="goTrack()">📦 Track Order</li>
+      <li onclick="logout()">🚪 Logout</li>
+    </ul>
+
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <main class="main">
+
+    <!-- HEADER -->
+    <div class="topbar">
+      <h1>Welcome Back 👋</h1>
+      <p>Manage your laundry bookings easily</p>
+    </div>
+
+    <!-- STATS -->
+    <div class="stats">
+
+      <div class="card">
+        <h2 id="totalOrders">0</h2>
+        <p>Total Orders</p>
+      </div>
+
+      <div class="card">
+        <h2 id="activeOrders">0</h2>
+        <p>Active Orders</p>
+      </div>
+
+      <div class="card">
+        <h2 id="deliveredOrders">0</h2>
+        <p>Delivered Orders</p>
+      </div>
+
+    </div>
+
+    <!-- ORDER HISTORY -->
+    <div class="orders">
+
+      <h2>Order History</h2>
+
+      <table>
+
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Service</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+
+        <tbody id="orders">
+          <!-- Firestore data loads here -->
+        </tbody>
+
+      </table>
+
+    </div>
+
+  </main>
+
+</div>
+
+<script type="module" src="js/dashboard.js"></script>
+<!-- Support Floating Button -->
+<div class="support-widget" onclick="openSupport()">
+  💬 Support
+</div>
+
+<!-- Support Box -->
+<div id="supportBox" class="support-box hidden">
+
+  <div class="support-header">
+    <h3>Washlyy Support</h3>
+    <span onclick="closeSupport()">✖</span>
+  </div>
+
+  <div class="support-body">
+    <p>Hi 👋 Need help?</p>
+    <p>📞 Call: +91 9447498095</p>
+    <p>📧 Email: washlyyinn@gmail.com</p>
+  </div>
+
+</div>
+
+</body>
+</html>

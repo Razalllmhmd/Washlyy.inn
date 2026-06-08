@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Track Order - Washlyy</title>
+
+  <link rel="stylesheet" href="css/track.css">
+  <link rel="icon" type="image/png" href="images/logo.png">
+</head>
+
+<body>
+
+<div class="track-container">
+
+  <div class="order-card">
+
+    <h2>📦 Track Your Order</h2>
+
+    <input
+      id="orderId"
+      type="text"
+      placeholder="Enter Order ID"
+    >
+
+    <button onclick="trackOrder()">
+      Track Order
+    </button>
+
+    <div id="result"></div>
+
+    <!-- TIMELINE -->
+    <div id="trackingTimeline" style="display:none;">
+
+      <h3>
+        Status:
+        <span id="currentStatus"></span>
+      </h3>
+
+      <div class="tracker">
+
+        <div class="progress-line">
+          <div id="progressFill"></div>
+        </div>
+
+        <div class="steps">
+
+          <div class="step">
+            <div id="c1" class="dot"></div>
+            <p>Pickup Scheduled</p>
+          </div>
+
+          <div class="step">
+            <div id="c2" class="dot"></div>
+            <p>Picked Up</p>
+          </div>
+
+          <div class="step">
+            <div id="c3" class="dot"></div>
+            <p>Washing</p>
+          </div>
+
+          <div class="step">
+            <div id="c4" class="dot"></div>
+            <p>Out for Delivery</p>
+          </div>
+
+          <div class="step">
+            <div id="c5" class="dot"></div>
+            <p>Delivered</p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+<script type="module" src="js/track.js"></script>
+
+</body>
+</html>

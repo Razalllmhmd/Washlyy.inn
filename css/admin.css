@@ -1,0 +1,153 @@
+/* Page */
+body{
+  margin:0;
+  font-family:Poppins,sans-serif;
+  background:#f4f7fb;
+}
+
+/* Sidebar */
+.sidebar{
+  background:#0077cc;
+  color:white;
+  padding:20px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.sidebar h2{
+  margin:0;
+}
+
+/* Logout Button */
+.logout-btn{
+  padding:10px 15px;
+  border:none;
+  border-radius:8px;
+  background:#ef4444;
+  color:white;
+  font-weight:600;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.logout-btn:hover{
+  background:#dc2626;
+}
+
+/* Container */
+.orders-container{
+  margin:60px;
+  background:white;
+  padding:20px;
+  border-radius:15px;
+  box-shadow:0 5px 20px rgba(0,0,0,0.08);
+}
+
+/* Header */
+.orders-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:15px;
+}
+
+.orders-header h2{
+  margin:0;
+  color:#0f172a;
+}
+
+/* Search */
+.orders-header input{
+  padding:10px;
+  border-radius:10px;
+  border:1px solid #ddd;
+  outline:none;
+  width:250px;
+}
+
+/* Table */
+.orders-table{
+  width:100%;
+  border-collapse:collapse;
+  overflow:hidden;
+}
+
+.orders-table th{
+  text-align:left;
+  padding:15px;
+  background:#0077cc;
+  color:white;
+  font-weight:500;
+}
+
+.orders-table td{
+  padding:15px;
+  border-bottom:1px solid #eee;
+}
+
+/* Hover */
+.orders-table tr:hover{
+  background:#f8fafc;
+}
+
+/* Status badges */
+.status{
+  padding:6px 12px;
+  border-radius:20px;
+  font-size:12px;
+  font-weight:600;
+  display:inline-block;
+}
+
+.pending{
+  background:#fff3cd;
+  color:#856404;
+}
+
+.washing{
+  background:#d1ecf1;
+  color:#0c5460;
+}
+
+.delivered{
+  background:#d4edda;
+  color:#155724;
+}
+
+/* Buttons */
+button{
+  padding:6px 12px;
+  border:none;
+  border-radius:8px;
+  cursor:pointer;
+  background:#0077cc;
+  color:white;
+}
+
+button:hover{
+  background:#005fa3;
+}
+
+/* Responsive */
+@media(max-width:768px){
+
+  .sidebar{
+    flex-direction:column;
+    gap:10px;
+    text-align:center;
+  }
+
+  .orders-container{
+    margin:15px;
+  }
+
+  .orders-header{
+    flex-direction:column;
+    gap:10px;
+  }
+
+  .orders-header input{
+    width:100%;
+  }
+}

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="icon" type="image/png" href="images/logo.png">
+
+<title>Washlyy</title>
+</head>
+
+<body>
+
+<div class="bg"></div>
+
+<header class="topbar">
+
+  <h2>Washlyy.inn</h2>
+
+  <div class="header-buttons">
+
+    <button onclick="goLogin()" class="customer-btn">
+      👤 Customer Login
+    </button>
+
+    <button onclick="goAdminLogin()" class="admin-btn">
+      🛠️ Admin Login
+    </button>
+
+  </div>
+
+</header>
+
+<section class="hero">
+
+  <div class="hero-overlay">
+
+    <h1>Fresh Laundry, Delivered</h1>
+
+    <p>
+      Book pickups, track orders and pay easily
+    </p>
+
+    <div class="hero-buttons">
+
+      <button onclick="goLogin()" class="start-btn">
+        Book Now
+      </button>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section class="services">
+
+  <h2>Our Services</h2>
+
+  <div class="service-grid">
+
+    <div class="service-card">Wash & Fold</div>
+    <div class="service-card">Dry Cleaning</div>
+    <div class="service-card">Ironing</div>
+    <div class="service-card">Express Delivery</div>
+
+  </div>
+
+</section>
+
+<section class="gallery">
+
+  <h2>How Washlyy Works</h2>
+
+  <div class="fade-card">
+
+    <img src="images/pickup.jpeg" alt="Pickup">
+
+    <div class="content">
+      <h3>🚚 Free Pickup</h3>
+      <p>
+        Schedule a pickup and our team will collect
+        your laundry from your doorstep.
+      </p>
+    </div>
+
+  </div>
+
+  <div class="fade-card right">
+
+    <div class="content">
+      <h3>🧺 Professional Cleaning</h3>
+      <p>
+        Advanced washing, dry cleaning and ironing
+        services for all garments.
+      </p>
+    </div>
+
+    <img src="images/washing.jpeg" alt="Washing">
+
+  </div>
+
+  <div class="fade-card">
+
+    <img src="images/delivery.jpeg" alt="Delivery">
+
+    <div class="content">
+      <h3>📦 Fast Delivery</h3>
+      <p>
+        Receive freshly cleaned clothes delivered
+        directly to your home.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+<section class="features">
+
+  <h2>Why Choose Washlyy?</h2>
+
+  <div>✓ Free Pickup</div>
+  <div>✓ Fast Delivery</div>
+  <div>✓ Secure Payments</div>
+  <div>✓ Live Tracking</div>
+
+</section>
+
+<footer>
+
+  <p>© 2026 Washlyy</p>
+  <p>Contact: support@washlyy.com</p>
+
+</footer>
+
+<script>
+
+function goLogin() {
+  window.location.href = "index.html";
+}
+
+function goAdminLogin() {
+  window.location.href = "admin-login.html";
+}
+
+/* Fade Animation */
+
+const observer = new IntersectionObserver((entries) => {
+
+  entries.forEach((entry) => {
+
+    if (entry.isIntersecting) {
+      entry.target.classList.add("show");
+    }
+
+  });
+
+});
+
+document.querySelectorAll(".fade-card")
+.forEach((el) => observer.observe(el));
+
+</script>
+
+</body>
+</html>
