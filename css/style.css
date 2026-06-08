@@ -281,13 +281,23 @@ body{
 
 @media(max-width:768px){
 
-  .fade-card,
+  .fade-card{
+      flex-direction:column;
+      gap:20px;
+      text-align:center;
+      margin:30px 0;
+  }
+
   .fade-card.right{
-    flex-direction:column;
+      flex-direction:column-reverse;
+      gap:20px;
+      text-align:center;
+      margin:30px 0;
   }
 
   .fade-card img{
-    width:100%;
+      width:100%;
+      max-width:350px;
   }
 
 }
